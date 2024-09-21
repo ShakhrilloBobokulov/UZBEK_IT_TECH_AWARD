@@ -1,0 +1,72 @@
+<table class="table border-primary table-sm fs-6 table-striped table-hover" id="rpmsetfilter"
+       style="line-height: 1.2 !important;">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Vehicle type</th>
+        <th scope="col">Order</th>
+        <th scope="col">Income from</th>
+        <th scope="col">Income to</th>
+        <th scope="col">RPM from</th>
+        <th scope="col">RPM to</th>
+        <th scope="col">Dailiy min. income</th>
+        <th scope="col">Bonus</th>
+        <th scope="col">Actions</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    {%for type in rpmsettinglist %}
+    <tr>
+        <td scope="row" id="top-table">{{type.pk}}</td>
+        <td id="responsive-border">{{type.vtype.title}}</td>
+        <td id="responsive-border">{{type.order}}</td>
+        <td id="responsive-border">{{type.cashfrom}}</td>
+        <td id="responsive-border">{{type.cashtill}}</td>
+        <td id="responsive-border">{{type.rpmfrom}}</td>
+        <td id="responsive-border">{{type.rpmtill}}</td>
+        <td id="responsive-border">{{type.cashdaily}}</td>
+        <td id="responsive-border">{{type.bonus}}</td>
+
+        <td id="responsive-border">
+            <a href="{% url 'admrpmsetview' type.pk %}" title="View rpm setting info" class="me-2 text-dark view-button">
+                <i class="far fa-eye"></i>
+            </a>
+
+            <a href="{% url 'admrpmsetupd' type.pk %}" title="Update rpm setting info" class="me-2 text-dark edit-button">
+                <i class="far fa-edit"></i>
+            </a>
+
+            <a href="{% url 'admrpmsetdel' type.pk %}" title="Delete rpm setting info" class="me-2 text-dark delete-button ">
+                <i class="far fa-trash-alt"></i>
+            </a>
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>
+        <td scope="row" id="top-table" label="ID"></td>
+        <td id="responsive-border" label="FIO" colspan="9">There is no vehicle type. Please add new vehicle type</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+
+        <th scope="col" style="width: 10% !important;">Actions</th>
+
+    </tr>
+    </tfoot>
+
+</table>

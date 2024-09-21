@@ -1,0 +1,75 @@
+<table class="table border-primary table-sm fs-6 table-striped table-hover" id="loadsfilter"
+       style="line-height: 1.2 !important;">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Load no</th>
+        <th scope="col">Truck</th>
+        <th scope="col">Truck type</th>
+        <th scope="col">Dispatcher</th>
+        <th scope="col">All miles</th>
+        <th scope="col">Total amount</th>
+        <th scope="col">Rate</th>
+        <th scope="col">Pick up date(State)</th>
+        <th scope="col">Drop date(State)</th>
+        <th scope="col">Actions</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    {%for type in loads %}
+    <tr>
+        <td scope="row" id="top-table">{{type.pk}}</td>
+        <td id="responsive-border">{{type.no}}</td>
+        <td id="responsive-border">{{type.truck}}</td>
+        <td id="responsive-border">{{type.trtype}}</td>
+        <td id="responsive-border">{{type.dispatch}}</td>
+        <td id="responsive-border">{{type.allmiles}}</td>
+        <td id="responsive-border">{{type.totalrate}}</td>
+        <td id="responsive-border">{{type.rate}}</td>
+        <td id="responsive-border">{{type.pickupdate|date:"Y-m-d"}}({{type.pickupstate }})</td>
+        <td id="responsive-border">{{type.dropdate|date:"Y-m-d"}}({{type.droppstate }})</td>
+
+        <td id="responsive-border">
+            <a href="{% url 'admloadview' type.pk %}" title="View load info" class="me-2 text-dark view-button">
+                <i class="far fa-eye"></i>
+            </a>
+
+            <a href="{% url 'admloadupd' type.pk %}" title="Update load info" class="me-2 text-dark edit-button">
+                <i class="far fa-edit"></i>
+            </a>
+
+            <a href="{% url 'admloaddel' type.pk %}" title="Delete load info" class="me-2 text-dark delete-button ">
+                <i class="far fa-trash-alt"></i>
+            </a>
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>
+        <td scope="row" id="top-table" label="ID"></td>
+        <td id="responsive-border" colspan="5">There is no dispatch info. Please add new dispatch info</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+
+        <th scope="col" style="width: 10% !important;">Actions</th>
+
+    </tr>
+    </tfoot>
+
+</table>

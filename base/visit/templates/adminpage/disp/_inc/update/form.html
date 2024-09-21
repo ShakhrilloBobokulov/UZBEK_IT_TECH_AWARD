@@ -1,0 +1,75 @@
+<form method="post" enctype="multipart/form-data" class="form-material" autocomplete="off">
+
+    {% csrf_token %}
+
+    <div class="row mb-4">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-4 h4">Dispatcher info</h5>
+            <!-- Name input -->
+
+
+            <div class="form-outline mb-3" data-mdb-input-init>
+                {{ disp.fullname }}
+                <label class="form-label" for="{{ disp.fullname.id_for_label }}">
+                    {{ disp.fullname.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ disp.fullname.errors }}
+                </div>
+            </div>
+
+            <div class="form-outline mb-3" data-mdb-input-init>
+                {{ disp.username }}
+                <label class="form-label" for="{{ disp.username.id_for_label }}">
+                    {{ disp.username.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ disp.username.errors }}
+                </div>
+            </div>
+
+            <div class="form-outline mb-3" data-mdb-input-init>
+                {{ disp.email }}
+                <label class="form-label" for="{{ disp.email.id_for_label }}">
+                    {{ disp.email.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ disp.email.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                {{ disp.telegramusername }}
+                <label class="form-label" for="{{ disp.telegramusername.id_for_label }}">
+                    {{ disp.telegramusername.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ disp.telegramusername.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                <span class="input-group-text" id="inputGroupPrepend4">+998</span>
+                {{ disp.phonenum }}
+                <label class="form-label labelrequired" for="{{ disp.phonenum.id_for_label }}">
+                    {{ disp.phonenum.label }}
+                </label>
+                <div class="invalid-feedback d-block mt-0 fs-6 mb-1">
+                    <br>
+                    <br>
+                    {{ disp.phonenum.errors }}
+                </div>
+            </div>
+
+
+            <!-- Name input -->
+
+        </div>
+
+
+    </div>
+
+    <hr/>
+
+    <button class="btn btn-primary waves-effect waves-light fs-6" type="submit">
+        Update
+    </button>
+</form>

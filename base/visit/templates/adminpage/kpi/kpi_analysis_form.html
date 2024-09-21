@@ -1,0 +1,59 @@
+{% extends 'adminpage/control/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main class="mb-5" style="margin-top: 70px;">
+    <!-- Container for demo purpose -->
+    <div class="px-4">
+        <!--        message out section-->
+        {% include '../../_inc/message.html'%}
+        <!--        message out section-->
+
+        <!--        title every page-->
+        <h1 class="h2 text-center py-1 mb-0">
+            {{title}}
+        </h1>
+        <!--        title every page-->
+        <!--        <section>-->
+
+        <h2 class="title">Select Date Range for KPI Analysis</h2>
+        <form action="{% url 'kpi_clustering_dashboard' %}" method="get" class="box">
+            <div class="field">
+                <label class="label">Start Date</label>
+                <div class="control">
+                    <input type="date" class="input" name="start_date" value="{{ start_date }}">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">End Date</label>
+                <div class="control">
+                    <input type="date" class="input" name="end_date" value="{{ end_date }}">
+                </div>
+            </div>
+            <button class="button is-primary" type="submit">Submit</button>
+        </form>
+
+        <!--        </section>-->
+
+    </div>
+</main>
+<!-- Main layout -->
+
+<!--Footer-->
+
+<!--Main layout-->
+
+{% endblock %}
+
+

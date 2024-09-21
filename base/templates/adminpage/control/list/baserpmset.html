@@ -1,0 +1,327 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>
+        {% block title %}UZBEK IT{% endblock %}
+    </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"/>
+    <!-- Font Awesome -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB ESSENTIAL -->
+    <link rel="stylesheet" href="{% static 'md5/css/mdb.min.css' %}"/>
+    <!-- MDB PLUGINS -->
+    <link rel="stylesheet" href="{% static 'md5/plugins/css/all.min.css' %}"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'adminpage/css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'adminpage/css/filter/tableresponsiveall.css' %}"/>
+    <!-- Custom styles -->
+
+    <!--    fixed datatable columns style -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/4.2.2/css/fixedColumns.dataTables.min.css"/>
+    <!--    fixed datatable columns style -->
+    <style>
+        #rpmsetfilter_info{
+
+            margin-bottom:  2rem;
+        }
+    #main-navbar .nn2{
+        background-color: #1ede6d !important;
+        color: #21283a;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+body {
+  background-color: #fbfbfb;
+}
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+
+
+
+
+
+    </style>
+
+    <style>
+    /*pagination*/
+    .dataTables_paginate{
+
+        margin-top: -30px !important
+    }
+    /*input search*/
+    .dataTables_filter{
+        display: none;
+    }
+
+    /*show entries*/
+    .dataTables_length{
+        float: right !important;
+        margin-top: 5px !important;
+    }
+
+    /*group buttons*/
+    .dt-buttons{
+        margin-bottom: 10px !important;
+    }
+
+    thead input {
+        width: 100%;
+        text-align: center;
+    }
+    /*.table{
+        font-size: .85rem;
+    }*/
+    .table-sm td{
+        padding: .2rem .4rem !important;
+    }
+
+    .table-sm th{
+        padding: .2rem 22px .2rem .4rem !important;
+    }
+
+
+    </style>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/datatables.min.css"/>
+    <!--    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"/>-->
+
+
+    <script src="{% static 'visit/js/script.js' %}"></script>
+</head>
+
+<body>
+
+
+<header>
+    {% include '../../inc/base/_leftbar.html'%}
+    {% include '../../inc/base/_navbar.html'%}
+
+
+</header>
+<!--Main Navigation-->
+<!--Main Navigation-->
+
+<!--<main style="margin-top: 58px;">-->
+<!--    <div class="container pt-4" style="max-width: 100% !important;">-->
+<!--Main layout-->
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
+
+</body>
+<!-- MDB ESSENTIAL -->
+<script type="text/javascript" src="{% static 'md5/js/mdb.umd.min.js' %}"></script>
+<!-- MDB PLUGINS -->
+<script type="text/javascript" src="{% static 'md5/plugins/js/all.min.js' %}"></script>
+<!-- Custom scripts -->
+<script type="text/javascript" src="{% static 'adminpage/js/filter/script.js' %}"></script>
+<script type="text/javascript"></script>
+
+
+<!--data table filter section-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript"
+        src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/datatables.min.js"></script>
+
+<!--fixed columns importing js -->
+    <script src="https://cdn.datatables.net/fixedcolumns/4.2.2/js/dataTables.fixedColumns.min.js"></script>
+<!--fixed columns importing js -->
+
+
+<!-- Custom scripts -->
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        /*
+        $('#rpmsetfilter thead tr')
+            .clone(true)
+            .addClass('filters')
+            .appendTo('#rpmsetfilter thead');
+            */
+
+        $('#rpmsetfilter tfoot th').each( function (i) {
+            if(i != 9){
+            var title = $('#rpmsetfilter thead th').eq( $(this).index() ).text();
+            $(this).html( '<input type="text" placeholder="'+title+'" data-index="'+i+'" />' );
+            }
+        } );
+
+        var table = $('#rpmsetfilter').DataTable({
+            //"ajax": "jsoncompanyadmin",
+            //"columns": [
+                //{"data": "id"},
+                //{"data": "title"},
+                //{"data": "owner"},
+                //{"data": "begin"},
+                //{"data": "till"},
+                //{"data": "status"},
+            //],
+
+
+            paging: true, //pagination
+            pageLength: 10, // data per page
+            lengthMenu: [5, 10, 50, 100, 200, 1000],
+            lengthChange: true, //show entries per page
+            autoWidth: false, // control auto width on columns
+            searching: true, // input search
+            bInfo: true, // info on footer
+            bSort: true, // filter  A to Z and Z to A( and numbers)
+
+            //disable columns with specific filter A to Z, Z to A
+            "columnDefs": [{
+                "targets": 2,
+                //"targets": [5, 6],
+                "orderable" : false
+            }],
+
+
+            "scrollX": true,
+            "scrollY": "50vh",
+            "scrollCollapse": true,
+            "fixedColumns": {
+                left: 2,
+                right: 1
+            },
+            dom: 'lBfrtip',
+            //buttons
+            buttons: [
+                {
+                    extend: 'copy',
+                    text: '<i class="fas fa-clone">',
+                    className: 'btn btn-light',
+                    titleAttr: 'Copy',
+                    //Choose the columns you with to copy
+                    exportOptions: {
+                        columns: [0, 1, 3, 4, 5, 6, 7, 8]
+                    }
+                },
+
+                {
+                    extend: 'excel',
+                    text: '<i class="fas fa-file-excel">',
+                    className: 'btn btn-light',
+                    titleAttr: 'Excel',
+                    //Choose the columns you with to copy
+                    exportOptions: {
+                        columns: [0, 1, 3, 4, 5, 6, 7, 8]
+                    }
+                },
+                {
+                    extend: 'print',
+                    text: '<i class="fas fa-print">',
+                    className: 'btn btn-light',
+                    titleAttr: 'Print',
+                    orientation: 'landscape', //portrait landscape
+					pageSize: 'A4', //A3 , A5 , A6 , legal , letter
+                    //Choose the columns you with to copy
+                    exportOptions: {
+                        columns: [0, 1, 3, 4, 5, 6, 7, 8]
+                    },
+                    customize: function(win){
+                        $(win.document.body).css('font-size', '10pt')
+                        $(win.document.body).find('table')
+                            .addClass('compact')
+                            .css('font-size', 'inherit')
+                    }
+                },
+
+                {
+                    extend: 'pdf',
+                    text: '<i class="fas fa-file-pdf">',
+                    className: 'btn btn-light',
+                    titleAttr: 'PDF',
+                    orientation: 'landscape', //portrait landscape
+					pageSize: 'A4', //A3 , A5 , A6 , legal , letter
+                    //Choose the columns you with to copy
+                    exportOptions: {
+                        columns: [0,1, 2, 3, 4, 5, 6, 7, 8]
+                    },
+                    //Center the table
+                    tableHeader: {
+                        alignment: 'center'
+                    },
+
+                    customize: function(doc){
+                        doc.styles.tableHeader.alignment = 'center'; //Header position
+                        doc.styles.tableBodyOdd.alignment = 'left'; //Body position 1
+                        doc.styles.tableBodyEven.alignment = 'left'; //Body position 2
+                        doc.styles.tableHeader.fontSize = 7; //header font size
+                        doc.defaultStyle.fontSize = 6; //Body font size
+
+                        //to get 100% width of the table
+                        doc.content[1].table.widths = Array(doc.content[1].table.body[1].length + 1).join('*').split('')
+                    }
+                },
+
+            ]
+        });
+        //enable searchbox outside
+        var newSearch = $("#rpmsetfilter").DataTable();
+        $('#search_modal').keyup(function(){
+            newSearch.search($(this).val()).draw();
+        });
+        // Filter event handler
+        $( table.table().container() ).on( 'keyup', 'tfoot input', function () {
+            table
+                .column( $(this).data('index') )
+                .search( this.value )
+                .draw();
+        } );
+    });
+
+</script>
+
+</html>

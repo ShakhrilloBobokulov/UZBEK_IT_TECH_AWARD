@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../../src/plugins/parallax/scss/_parallax.scss"],"names":[],"mappings":"AAAA,qBACE,aACA,UACA,mBAEA,wCAGF,iBACE","file":"parallax.min.css","sourcesContent":[".parallax-slider > img {\n  display: none;\n  opacity: 0;\n  transform: scale(0);\n\n  transition: opacity transform 0.2s linear;\n}\n\n.parallax-slider {\n  z-index: -1;\n}\n"]}

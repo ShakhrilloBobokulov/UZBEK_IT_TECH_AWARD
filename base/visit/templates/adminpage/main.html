@@ -1,0 +1,178 @@
+{% extends 'adminpage/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main class="mb-5">
+    <!-- Container for demo purpose -->
+    <div class="container px-4">
+
+        <!-- Section: Business Performance KPIs -->
+        <section class="mb-8">
+            <div class="card shadow-0">
+                <div class="card-header border-0 p-3">
+                    <strong>Business Performance KPIs</strong>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-borderless table-striped text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Page Views</th>
+                                    <th scope="col">Unique Users</th>
+                                    <th scope="col">Conversions</th>
+                                    <th scope="col">Total Revenue</th>
+                                    <th scope="col">Avg. Conversion Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Value</th>
+                                    <td>52,432</td>
+                                    <td>14,328</td>
+                                    <td>1,074</td>
+                                    <td>$142,764.00</td>
+                                    <td>6.70%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Percentage change</th>
+                                    <td>
+                                        <span class="text-danger">
+                                            <i class="fas fa-caret-down me-1"></i><span>-12.5%</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success">
+                                            <i class="fas fa-caret-up me-1"></i><span>7.8%</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success">
+                                            <i class="fas fa-caret-up me-1"></i><span>15.2%</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success">
+                                            <i class="fas fa-caret-up me-1"></i><span>23.4%</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success">
+                                            <i class="fas fa-caret-up me-1"></i><span>1.5%</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Absolute change</th>
+                                    <td>
+                                        <span class="text-danger">
+                                            <i class="fas fa-caret-down me-1"></i><span>-6,530</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success">
+                                            <i class="fas fa-caret-up me-1"></i><span>1,040</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success">
+                                            <i class="fas fa-caret-up me-1"></i><span>142</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success">
+                                            <i class="fas fa-caret-up me-1"></i><span>$27,064.00</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-success">
+                                            <i class="fas fa-caret-up me-1"></i><span>+0.10%</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Business Performance KPIs -->
+
+        <!-- Section: Conversion Funnel & Revenue -->
+        <section class="mb-4">
+            <div class="row gx-xl-5">
+                <div class="col-md-5 mb-4">
+                    <div class="card shadow-0 h-100">
+                        <div class="card-header border-0 py-3">
+                            <strong>Conversion Funnel</strong>
+                        </div>
+                        <div class="card-body">
+                            <div id="chart-conversion-funnel">
+                                <img src="{% static 'images/charts/chart2.png' %}" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7 mb-4">
+                    <div class="card shadow-0">
+                        <div class="card-header border-0 py-3">
+                            <strong>Total Revenue Breakdown</strong>
+                        </div>
+                        <div class="card-body">
+                            <div id="chart-total-revenue">
+                                <img src="{% static 'images/charts/chart1.webp' %}" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Section: Conversion Funnel & Revenue -->
+
+        <!-- Section: Revenue Sources and Analytics -->
+        <section>
+            <div class="card shadow-0">
+                <div class="card-header border-0 p-3">
+                    <strong>Revenue Sources and Detailed Analysis</strong>
+                </div>
+                <div class="card-body">
+                    <div class="row gx-xl-5 align-items-center">
+                        <div class="col-md-4 mb-4">
+                            <div id="chart-revenue-sources" class="mb-4"></div>
+                            <div id="chart-marketing-sources" class="px-3"></div>
+                        </div>
+
+                        <div class="col-md-8 mb-4">
+                            <div id="datatable-revenue-sources">
+                                <img src="{% static 'images/charts/chart3.jpg' %}" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Revenue Sources and Analytics -->
+
+    </div>
+    <!-- Container for demo purpose -->
+</main>
+<!-- Main layout -->
+
+<!--Footer-->
+
+<!--Main layout-->
+
+{% endblock %}

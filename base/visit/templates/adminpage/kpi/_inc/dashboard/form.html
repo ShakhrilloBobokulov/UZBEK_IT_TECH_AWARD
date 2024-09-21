@@ -1,0 +1,29 @@
+<form method="post" enctype="multipart/form-data" class="form-material" autocomplete="off"
+      action="{% url 'run_kpi_clustering' %}">
+
+    {% csrf_token %}
+
+    <div class="row mb-4">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-4 h4">Number of clusters to form</h5>
+            <!-- Name input -->
+
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                {{ form.num_clusters }}
+                <label class="form-label" for="{{ form.num_clusters.id_for_label }}">
+                    {{ form.num_clusters.label }}</label>
+                <span class="input-group-text" id="inputGroupPrepend2">AMOUNT</span>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ form.num_clusters.errors }}
+                </div>
+            </div>
+
+            <button class="btn btn-primary waves-effect waves-light fs-6" type="submit">
+                Run Forecast
+            </button>
+
+        </div>
+    </div>
+</form>

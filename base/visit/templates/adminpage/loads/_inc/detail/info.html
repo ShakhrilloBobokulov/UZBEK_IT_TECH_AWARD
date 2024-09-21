@@ -1,0 +1,137 @@
+<div class="form-material">
+
+    <div class="row mb-4 stripsection">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-1 h4" style="color: #35558a;">Load info</h5>
+
+            <!-- Name input -->
+            <!--                            <p class="mb-0" style="color: #35558a;">Payment summary</p>-->
+            <hr class="mt-2 mb-4"
+                style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Load No</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.no}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Truck</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.truck}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Truck type</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.trtype}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Dispatcher</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.dispatch}}
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">All miles</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.allmiles}} miles.
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Total amount</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.totalrate}} USD
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Rate</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.rate}} %
+                </p>
+            </div>
+
+            <h5 class="mb-1 mt-3 h5" style="color: #35558a;">Additional note of load</h5>
+            <hr class="mt-2 mb-1"
+                style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
+
+
+            <div class="d-flex justify-content-between">
+                <p class="mb-0" style="color: #35558a;">
+                    {{loadinfo.info}}
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-1 h4" style="color: #35558a;">Load's date and place</h5>
+
+            <!-- Name input -->
+            <!--                            <p class="mb-0" style="color: #35558a;">Payment summary</p>-->
+            <hr class="mt-2 mb-4"
+                style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Pick up state</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.pickupstate}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Pick up zip</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.pickupzip}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Pick up date</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.pickupdate|date:"Y-m-d"}}
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Pick up time</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.pickuptime|date:"H:i"}}
+                </p>
+            </div>
+
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Drop state</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.droppstate}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Drop zip code</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.dropzip}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Drop date</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.dropdate|date:"Y-m-d"}}
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Drop time</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{loadinfo.droptime|date:"H:i"}}
+                </p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>

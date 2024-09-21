@@ -1,0 +1,31 @@
+<form method="post" enctype="multipart/form-data" class="form-material" autocomplete="off">
+
+    {% csrf_token %}
+
+    <div class="row mb-4">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-4 h4">Vehicle type info</h5>
+            <!-- Name input -->
+            <div class="form-outline mb-3" data-mdb-input-init>
+                {{ vehicletype.title }}
+                <label class="form-label labelrequired" for="{{ vehicletype.title.id_for_label }}">
+                    {{ vehicletype.title.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ vehicletype.title.errors }}
+                </div>
+            </div>
+
+            <!-- Name input -->
+
+        </div>
+
+
+    </div>
+
+    <hr/>
+
+    <button class="btn btn-primary waves-effect waves-light fs-6" type="submit">
+        Update
+    </button>
+</form>

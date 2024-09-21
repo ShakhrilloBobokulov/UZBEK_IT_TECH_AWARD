@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../../src/plugins/captcha/scss/_captcha.scss"],"names":[],"mappings":"AAAA,gBACE","file":"captcha.min.css","sourcesContent":[".captcha iframe {\n  color-scheme: none;\n}\n"]}

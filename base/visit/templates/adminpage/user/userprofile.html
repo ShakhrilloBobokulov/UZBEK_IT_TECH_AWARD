@@ -1,0 +1,67 @@
+{% extends 'adminpage/baseuserp.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<!--Main Navigation-->
+
+<!--Main layout-->
+<!-- Heading -->
+<main class="mb-5">
+<section class="mb-5 mb-lg-8 text-center text-md-start">
+    <!-- Background gradient -->
+    <div class="p-5"
+         style="height: 200px; background: linear-gradient(to right, hsl(209, 42.2%, 65%), hsl(209, 42.2%, 85%));">
+    </div>
+    <!-- Background gradient -->
+
+    <div class="container px-4">
+        <div class="card shadow-0" style="margin-top: -100px;">
+            <div class="card-body py-5 px-5">
+                <div class="row gx-lg-4 align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+                        <h1 class="">Company name: {{request.user.company.title}}</h1>
+                        <!-- Breadcrumb -->
+                        <nav class="d-flex justify-content-center justify-content-lg-start">
+                            <h6 class="mb-0">
+                                <a href="" class="text-muted">Manager: {{request.user.username}}</a>
+                            </h6>
+                        </nav>
+                        <!-- Breadcrumb -->
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <button type="button" class="btn btn-link me-1 mb-4 px-2 px-md-3" data-mdb-ripple-init
+                                data-ripple-color="primary">
+                            Customize<i class="fas fa-cogs ms-2"></i>
+                        </button>
+                        <button type="button" class="btn btn-link mb-4 px-2 px-md-3" data-mdb-ripple-init
+                                data-ripple-color="primary">
+                            Export<i class="fas fa-download ms-2"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+<!-- Heading -->
+
+<!-- Main layout -->
+
+<!--Footer-->
+
+<!--Main layout-->
+
+{% endblock %}

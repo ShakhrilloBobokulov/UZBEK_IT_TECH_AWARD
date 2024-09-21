@@ -1,0 +1,58 @@
+<table class="table border-primary table-sm fs-6 table-striped table-hover" id="truckfilter"
+       style="line-height: 1.2 !important;">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Unit</th>
+        <th scope="col">Type of truck</th>
+        <th scope="col">Company owned</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    {%for type in trucklist %}
+    <tr>
+        <td scope="row" id="top-table">{{type.pk}}</td>
+        <td id="responsive-border">{{type.unit}}</td>
+        <td id="responsive-border">{{type.trtype}}</td>
+        <td id="responsive-border">{{type.companyowned}}</td>
+        <td id="responsive-border">{{type.status}}</td>
+        <td id="responsive-border">
+            <a href="{% url 'admtruckview' type.pk %}" title="View truck info" class="me-2 text-dark view-button">
+                <i class="far fa-eye"></i>
+            </a>
+
+            <a href="{% url 'admtruckupd' type.pk %}" title="Update truck info" class="me-2 text-dark edit-button">
+                <i class="far fa-edit"></i>
+            </a>
+
+            <a href="{% url 'admtruckdel' type.pk %}" title="Delete truck info" class="me-2 text-dark delete-button ">
+                <i class="far fa-trash-alt"></i>
+            </a>
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>
+        <td scope="row" id="top-table" label="ID"></td>
+        <td id="responsive-border" colspan="5">There is no dispatch info. Please add new dispatch info</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col" style="width: 10% !important;">Actions</th>
+
+    </tr>
+    </tfoot>
+
+</table>

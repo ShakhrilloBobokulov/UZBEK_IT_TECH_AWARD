@@ -1,0 +1,132 @@
+<form method="post" enctype="multipart/form-data" class="form-material" autocomplete="off">
+
+    {% csrf_token %}
+
+    <div class="row mb-4">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-4 h4">New RPM setting criteria</h5>
+            <!-- Name input -->
+
+
+            <div class="form-group mb-3">
+                {{ rpmsetting.vtype }}
+                <label class="form-label select-label labelrequired" for="{{ rpmsetting.vtype.id_for_label }}">
+                    {{ rpmsetting.vtype.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ rpmsetting.vtype.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                <span class="input-group-text" id="inputGroupPrepend1">FROM</span>
+                {{ rpmsetting.cashfrom }}
+                <label class="form-label labelrequired" for="{{ rpmsetting.cashfrom.id_for_label }}">
+                    {{ rpmsetting.cashfrom.label }}
+                </label>
+                <span class="input-group-text" id="inputGroupPrepend2">$</span>
+                <div class="invalid-feedback d-block mt-0 fs-6 mb-1">
+                    <br>
+                    <br>
+                    {{ rpmsetting.cashfrom.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                <span class="input-group-text" id="inputGroupPrepend3">TO</span>
+                {{ rpmsetting.cashtill }}
+                <label class="form-label labelrequired" for="{{ rpmsetting.cashtill.id_for_label }}">
+                    {{ rpmsetting.cashtill.label }}
+                </label>
+                <span class="input-group-text" id="inputGroupPrepend4">$</span>
+                <div class="invalid-feedback d-block mt-0 fs-6 mb-1">
+                    <br>
+                    <br>
+                    {{ rpmsetting.cashtill.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                <span class="input-group-text" id="inputGroupPrepend5">FROM</span>
+                {{ rpmsetting.rpmfrom }}
+                <label class="form-label labelrequired" for="{{ rpmsetting.rpmfrom.id_for_label }}">
+                    {{ rpmsetting.rpmfrom.label }}
+                </label>
+                <span class="input-group-text" id="inputGroupPrepend6">rpm</span>
+                <div class="invalid-feedback d-block mt-0 fs-6 mb-1">
+                    <br>
+                    <br>
+                    {{ rpmsetting.rpmfrom.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                <span class="input-group-text" id="inputGroupPrepend7">TO</span>
+                {{ rpmsetting.rpmtill }}
+                <label class="form-label labelrequired" for="{{ rpmsetting.rpmtill.id_for_label }}">
+                    {{ rpmsetting.rpmtill.label }}
+                </label>
+                <span class="input-group-text" id="inputGroupPrepend8">rpm</span>
+                <div class="invalid-feedback d-block mt-0 fs-6 mb-1">
+                    <br>
+                    <br>
+                    {{ rpmsetting.rpmtill.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                {{ rpmsetting.cashdaily }}
+                <label class="form-label labelrequired" for="{{ rpmsetting.cashdaily.id_for_label }}">
+                    {{ rpmsetting.cashdaily.label }}
+                </label>
+                <span class="input-group-text" id="inputGroupPrepend10">$</span>
+                <div class="invalid-feedback d-block mt-0 fs-6 mb-1">
+                    <br>
+                    <br>
+                    {{ rpmsetting.cashdaily.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                {{ rpmsetting.bonus }}
+                <label class="form-label labelrequired" for="{{ rpmsetting.bonus.id_for_label }}">
+                    {{ rpmsetting.bonus.label }}
+                </label>
+                <span class="input-group-text" id="inputGroupPrepend9">%</span>
+                <div class="invalid-feedback d-block mt-0 fs-6 mb-1">
+                    <br>
+                    <br>
+                    {{ rpmsetting.bonus.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                <span class="input-group-text" id="inputGroupPrepend11">No</span>
+                {{ rpmsetting.order }}
+                <label class="form-label labelrequired" for="{{ rpmsetting.order.id_for_label }}">
+                    {{ rpmsetting.order.label }}
+                </label>
+
+                <div class="invalid-feedback d-block mt-0 fs-6 mb-1">
+                    <br>
+                    <br>
+                    {{ rpmsetting.order.errors }}
+                </div>
+            </div>
+
+
+
+
+            <!-- Name input -->
+
+        </div>
+
+
+    </div>
+
+    <hr/>
+
+    <button class="btn btn-primary waves-effect waves-light fs-6" type="submit">
+        Add
+    </button>
+</form>

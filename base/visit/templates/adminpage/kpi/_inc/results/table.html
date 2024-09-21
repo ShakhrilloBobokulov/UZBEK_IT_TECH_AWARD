@@ -1,0 +1,19 @@
+<table class="table border-primary table-sm fs-6 table-striped table-hover" style="line-height: 1.2 !important;">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th>Dispatcher</th>
+        <th>Truck</th>
+        <th>Cluster ID</th>
+        <th>Created at</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>{{result.pk}}</td>
+        <td>{{ result.dispatch }}</td>
+        <td>{{ result.truck }}</td>
+        <td>{{ result.cluster_id }}</td>
+        <td>{{ result.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>

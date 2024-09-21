@@ -1,0 +1,17 @@
+<table class="table border-primary table-sm fs-6 table-striped table-hover" style="line-height: 1.2 !important;">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th>Date</th>
+        <th>Forecasted Demand</th>
+        <th>Created at</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>{{result.pk}}</td>
+        <td>{{ result.forecast_date }}</td>
+        <td>{{ result.forecasted_demand }}</td>
+        <td>{{ result.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>

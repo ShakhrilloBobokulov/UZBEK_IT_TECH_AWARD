@@ -1,0 +1,62 @@
+{% extends 'adminpage/control/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main class="mb-5" style="margin-top: 70px;">
+    <!-- Container for demo purpose -->
+    <div class="px-4">
+<!--        message out section-->
+        {% include '../../_inc/message.html'%}
+<!--        message out section-->
+
+<!--        title every page-->
+        <h1 class="h2 text-center py-1 mb-0">
+            {{title}}
+        </h1>
+<!--        title every page-->
+<!--        <section>-->
+            <div class="card">
+                <div class="card-body">
+                    {% include './_inc/delete/bar.html' %}
+                    <hr/>
+
+                    <form method="post" enctype="multipart/form-data" class="">
+
+                        {% csrf_token %}
+                        <p class="fw-bold">Do you really want to delete Load info (No. "{{ loadmodel.no}}") ?</p>
+                        <button type="submit" class="btn btn-danger waves-effect waves-light">
+                            Confirm
+                        </button>
+                        <a href="{% url 'admloadslist' %}" class="btn btn-success waves-effect waves-light">
+                            Cancel
+                        </a>
+
+
+                    </form>
+
+
+                </div>
+            </div>
+
+<!--        </section>-->
+
+    </div>
+</main>
+<!-- Main layout -->
+
+<!--Footer-->
+
+<!--Main layout-->
+
+{% endblock %}

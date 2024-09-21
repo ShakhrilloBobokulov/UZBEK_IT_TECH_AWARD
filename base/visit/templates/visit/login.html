@@ -1,0 +1,167 @@
+{% extends 'visit/basevideo.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<main class="mt-3">
+    <br>
+
+    <div class="container my-5">
+        {% include '../_inc/message.html'%}
+        <!--Section: Project Overview-->
+
+        <!-- Section: Design Block -->
+        <section class="">
+            <!-- Jumbotron -->
+            <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+                <div class="container">
+                    <div class="row gx-lg-5 align-items-center">
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <h1 class="my-5 display-3 fw-bold ls-tight">
+                                The best offer <br/>
+                                <span class="text-primary">for your business</span>
+                            </h1>
+                            <p style="color: hsl(217, 10%, 50.8%)">
+                                Welcome to MetricsUp! Streamline your logistics operations with our powerful business
+                                analytics platform.
+                                Log in to access real-time insights and predictive analytics that empower your
+                                decision-making and drive operational excellence.
+                                Our secure and user-friendly interface ensures your data is protected while providing
+                                you with the tools needed to
+                                optimize your supply chain and boost efficiency. Whether you're tracking shipments or
+                                analyzing costs,
+                                MetricsUp has the features you need to stay ahead.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <div class="card">
+                                <div class="card-body py-5 px-md-5">
+
+                                    <section class="">
+                                        <ul class="nav nav-pills nav-justified mb-3" id="ex1">
+                                            <li class="nav-item">
+                                                <a class="nav-link active">Login</a>
+                                            </li>
+                                        </ul>
+                                        <!-- Pills navs -->
+
+                                        <!-- Pills content -->
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade show active">
+                                                <form method="POST" enctype="multipart/form-data" autocomplete="off">
+
+                                                    {% csrf_token %}
+                                                    <div class="text-center mb-3">
+                                                        <p>Sign in with:</p>
+                                                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                                                class="btn btn-link btn-floating mx-1">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </button>
+
+                                                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                                                class="btn btn-link btn-floating mx-1">
+                                                            <i class="fab fa-google"></i>
+                                                        </button>
+
+                                                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                                                class="btn btn-link btn-floating mx-1">
+                                                            <i class="fab fa-twitter"></i>
+                                                        </button>
+
+                                                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                                                class="btn btn-link btn-floating mx-1">
+                                                            <i class="fab fa-github"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <p class="text-center">or:</p>
+                                                    {% for field in form %}
+                                                    {% if field.errors %}
+                                                    <div class="form-group">
+                                                        <div class="invalid-feedback">
+                                                            {{ field.errors }}
+                                                        </div>
+                                                    </div>
+                                                    {% endif %}
+                                                    {% endfor %}
+
+
+                                                    <!-- Email input -->
+                                                    <div data-mdb-input-init class="form-outline mb-4">
+                                                        {{ form.username }}
+                                                        <label class="form-label"
+                                                               for="{{ form.username.id_for_label }}">
+                                                            {{ form.username.label }}</label>
+                                                        <div class="invalid-feedback d-block mt-1 mb-1">
+                                                            {{ form.username.errors }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div data-mdb-input-init class="form-outline mb-4">
+                                                        {{ form.password }}
+                                                        <label class="form-label"
+                                                               for="{{ form.password.id_for_label }}">
+                                                            {{ form.password.label }}</label>
+                                                        <div class="invalid-feedback d-block mt-1 mb-1">
+                                                            {{ form.password.errors }}
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- 2 column grid layout -->
+                                                    <div class="row mb-4">
+                                                        <div class="col-md-6 d-flex justify-content-center">
+                                                            <!-- Checkbox -->
+                                                            <div class="form-check mb-3 mb-md-0">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                       id="loginCheck" checked/>
+                                                                <label class="form-check-label" for="loginCheck">
+                                                                    Remember me </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 d-flex justify-content-center">
+                                                            <!-- Simple link -->
+                                                            <a href="#!">Forgot password?</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Submit button -->
+                                                    <button type="submit" data-mdb-ripple-init
+                                                            class="btn btn-primary btn-block mb-4">Sign in
+                                                    </button>
+
+                                                    <!-- Register buttons -->
+                                                    <div class="text-center">
+                                                        <p>Not a member? <a href="#!">Register</a></p>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- Pills content -->
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Jumbotron -->
+        </section>
+        <!-- Section: Design Block -->
+        <!-- Pills navs -->
+
+    </div>
+</main>
+
+<!--Main layout-->
+
+{% endblock %}

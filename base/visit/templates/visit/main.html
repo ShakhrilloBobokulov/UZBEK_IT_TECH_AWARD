@@ -1,0 +1,278 @@
+{% extends 'visit/basevisit.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<main>
+    <div class="container my-5">
+
+      <!--Section: Project Overview-->
+<section>
+    <h3 class="text-center mb-5">Why Choose Our Business Analytics Platform</h3>
+
+    <p class="text-center mb-5 mx-auto w-responsive">
+        Our platform empowers small and medium-sized businesses with tools to assess financial performance and forecast growth. By integrating advanced AI and machine learning, we provide actionable insights for improved decision-making and operational optimization.
+    </p>
+
+    <div class="row">
+        <div class="col-lg-4 mb-lg-0 mb-5">
+            <div class="d-flex justify-content-start">
+                <div class="me-4">
+                    <i class="fas fa-chart-line text-danger fa-2x" style="color: #7f00ee;"></i>
+                </div>
+                <div>
+                    <h5>Comprehensive Financial Analysis</h5>
+                    <p>
+                        Our platform offers in-depth financial analysis, allowing businesses to track revenue, expenses, and key metrics. With real-time data and customizable dashboards, you can monitor performance and make data-driven decisions.
+                    </p>
+                    <a class="btn btn-danger btn-rounded" data-mdb-ripple-init>Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-lg-0 mb-5">
+            <div class="d-flex justify-content-start">
+                <div class="me-4">
+                    <i class="fas fa-cogs text-danger fa-2x" style="color: #7f00ee;"></i>
+                </div>
+                <div class="col-lg-10 col-md-9 col-10">
+                    <h5>AI-Driven Insights</h5>
+                    <p>
+                        Harness AI to generate predictive insights. Our platform employs machine learning to analyze data trends and forecast performance, enabling strategic planning and a competitive edge.
+                    </p>
+                    <a class="btn btn-danger btn-rounded" data-mdb-ripple-init>Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex justify-content-start">
+                <div class="me-4">
+                    <i class="fas fa-lock text-danger fa-2x" style="color: #7f00ee;"></i>
+                </div>
+                <div class="col-lg-10 col-md-9 col-10">
+                    <h5>Secure and Compliant</h5>
+                    <p>
+                        Security and compliance are fundamental to our platform. We utilize robust encryption, role-based access controls, and comply with GDPR regulations to ensure your data remains protected.
+                    </p>
+                    <a class="btn btn-danger btn-rounded" data-mdb-ripple-init>Learn More</a>
+                </div>
+            </div>
+            <span id="services"></span>
+        </div>
+    </div>
+</section>
+<!--Section: Project Overview-->
+
+
+        <hr class="my-5"/>
+
+
+      <!--Section: Services Overview-->
+<section>
+    <h3 class="text-center mb-5">Our Key Services</h3>
+
+    <p class="text-center mb-md-5 mx-auto w-responsive">
+        Our platform offers essential services designed to enhance logistics operations for businesses engaged in outsourcing. From financial analytics to robust data security, we provide the tools needed to thrive in the competitive logistics market.
+    </p>
+
+    <div class="row align-items-center">
+        <div class="col-lg-6" style="margin-top: -5.3rem;">
+            <img src="https://mdbootstrap.com/img/illustrations/graphics(3).png" class="img-fluid"
+                 alt="Logistics operations illustration"/>
+        </div>
+        <div class="col-lg-6">
+            <div class="row mb-4">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-chart-line fa-2x" style="color: #7f00ee;"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5>Logistics Financial Analytics</h5>
+                    <p>
+                        Utilize detailed financial analytics tailored for logistics operations. Our platform helps track key financial metrics and optimize cost management for informed decision-making and growth.
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-sync-alt fa-2x" style="color: #7f00ee;"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5>Seamless System Integration</h5>
+                    <p>
+                        Effortlessly integrate our platform with your existing logistics management systems. Improve operational efficiency through synchronization with your current tools, such as inventory and shipment tracking.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1 col-2">
+                    <i class="fas fa-lock fa-2x" style="color: #7f00ee;"></i>
+                </div>
+                <div class="col-md-11 col-10">
+                    <h5>Robust Data Security</h5>
+                    <p>
+                        We prioritize your data security with advanced encryption methods and role-based access controls, ensuring all business information remains secure and compliant with regulations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span id="attracts"></span>
+</section>
+<!--Section: Services Overview-->
+
+
+        <hr class="my-5"/>
+
+        <!--Section: Latest News-->
+        <section class="text-center">
+            <h3 class="mb-5">Latest Updates</h3>
+
+            <p class="mb-5 mx-auto w-responsive">
+                Stay informed with the most recent developments and insights from our platform. Here, we share the
+                latest news, updates on our services, and important announcements to keep you in the loop.
+            </p>
+
+            <div class="row">
+                <div class="col-md-12 col-lg-4 mb-4">
+                    <div class="bg-image hover-zoom mb-4 shadow-1-strong rounded">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid"
+                             alt="News Image 1"/>
+                        <a href="#!">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <h5 class="mb-3">New Feature Release: Advanced Analytics</h5>
+                    <p class="mb-4">
+                        We are excited to announce the launch of our new Advanced Analytics feature. This tool offers
+                        deeper insights into your financial data, helping you make more informed decisions and optimize
+                        your business operations.
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                        <a class="p-2 fa-lg fb-ic">
+                            <i class="fab fa-facebook-f text-danger"> </i>
+                        </a>
+                        <a class="p-2 fa-lg tw-ic">
+                            <i class="fab fa-twitter text-danger"> </i>
+                        </a>
+                        <a class="p-2 fa-lg ins-ic">
+                            <i class="fab fa-instagram text-danger"> </i>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="bg-image hover-zoom mb-4 shadow-1-strong rounded">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid"
+                             alt="News Image 2"/>
+                        <a href="#!">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <h5 class="mb-3">Partnership Announcement with XYZ Corp</h5>
+                    <p class="mb-4">
+                        We are thrilled to announce our partnership with XYZ Corp, a leading provider of logistics
+                        solutions. This collaboration aims to enhance our platform’s capabilities and offer our users
+                        more comprehensive services.
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                        <a class="p-2 fa-lg fb-ic">
+                            <i class="fab fa-facebook-f text-danger"> </i>
+                        </a>
+                        <a class="p-2 fa-lg tw-ic">
+                            <i class="fab fa-twitter text-danger"> </i>
+                        </a>
+                        <a class="p-2 fa-lg ins-ic">
+                            <i class="fab fa-instagram text-danger"> </i>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="bg-image hover-zoom mb-4 shadow-1-strong rounded">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid"
+                             alt="News Image 3"/>
+                        <a href="#!">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <h5 class="mb-3">Upcoming Webinar: Optimizing Logistics with AI</h5>
+                    <p class="mb-4">
+                        Join us for an exclusive webinar where we’ll discuss how AI is transforming logistics and supply
+                        chain management. Learn how our platform can help you stay ahead in the fast-evolving industry.
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                        <a class="p-2 fa-lg fb-ic">
+                            <i class="fab fa-facebook-f text-danger"> </i>
+                        </a>
+                        <a class="p-2 fa-lg tw-ic">
+                            <i class="fab fa-twitter text-danger"> </i>
+                        </a>
+                        <a class="p-2 fa-lg ins-ic">
+                            <i class="fab fa-instagram text-danger"> </i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <span id="contact"></span>
+        </section>
+        <!--Section: Latest News-->
+
+
+        <hr class="my-5"/>
+
+        <!--Section: Design Block-->
+        <!--Section: Contact Us-->
+        <section class="text-center">
+            <h3 class="mb-5">Get in Touch</h3>
+
+            <p class="text-center mb-5 mx-auto w-responsive">
+                Have questions, feedback, or need assistance? We’re here to help! Reach out to us, and we’ll respond as
+                soon as possible. Your satisfaction is our priority.
+            </p>
+
+            <form>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <p class="text-center mt-lg-4 mb-4">
+                            <strong>Contact us today for more information or support</strong>
+                        </p>
+                        <div class="form-outline mb-4" data-mdb-input-init>
+                            <input type="text" id="contactName" class="form-control"/>
+                            <label class="form-label" for="contactName">Full Name</label>
+                        </div>
+                        <div class="form-outline mb-4" data-mdb-input-init>
+                            <input type="email" id="contactEmail" class="form-control"/>
+                            <label class="form-label" for="contactEmail">Email Address</label>
+                        </div>
+                        <div class="form-outline mb-4" data-mdb-input-init>
+                            <textarea class="form-control" id="contactMessage" rows="4"></textarea>
+                            <label class="form-label" for="contactMessage">Your Message</label>
+                        </div>
+                        <div class="text-center pb-3">
+                            <button type="submit" class="btn btn-outline-danger btn-rounded btn-block mb-5 mb-md-0"
+                                    data-mdb-ripple-init>
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" style="margin-top: -7rem;">
+                        <img src="https://mdbootstrap.com/img/illustrations/graphics(1).png" class="img-fluid"
+                             alt="Contact Us"/>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!--Section: Contact Us-->
+
+        <!--Section: Design Block-->
+
+    </div>
+</main>
+
+<!--Main layout-->
+
+{% endblock %}

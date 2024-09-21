@@ -1,0 +1,72 @@
+<div class="form-material">
+
+    <div class="row mb-4 stripsection">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-1 h4" style="color: #35558a;">Company info</h5>
+
+            {% if company.pk %}
+
+            <!-- Name input -->
+            <!--                            <p class="mb-0" style="color: #35558a;">Payment summary</p>-->
+            <hr class="mt-2 mb-4"
+                style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Company name</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{company.title}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Company address</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{company.address}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Company Tax number</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{company.taxnum}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Company Account number</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{company.accnum}}
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Company phone number</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{company.phonenum}}
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Company info added</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{company.created_at|date:"Y-m-d"}}
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Company info last updated</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{company.updated_at|date:"Y-m-d"}}
+                </p>
+            </div>
+
+            {% else %}
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Please input your company info</p>
+            </div>
+            {% endif %}
+
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-end mb-4">
+    <div class="form-outline">
+        <input data-mdb-search data-mdb-target="#table_modal" type="text" id="search_modal"
+               class="form-control"/>
+        <label class="form-label" for="search_modal"></label>
+    </div>
+
+
+    <a href="{% url 'admtypevehicles' %}"
+       class="btn btn-primary btn-sm ms-3 d-flex align-items-center justify-content-center"
+       title="List of vehicle types"
+    >
+        <i class="fas fa-list"></i>
+    </a>
+
+    <a href="{% url 'adtypevehicle' %}"
+       class="btn btn-primary btn-sm ms-3 d-flex align-items-center justify-content-center"
+       title="Add new  vehicle type"
+    >
+        <i class="fa fa-plus"></i>
+    </a>
+
+    <a href="{% url 'admtypevehicledel' tvehiclemodel.pk %}"
+       class="btn btn-primary btn-sm ms-3 d-flex align-items-center justify-content-center"
+       title="Delete vehicle type"
+    >
+        <i class="far fa-trash-alt"></i>
+    </a>
+
+
+    <a href="{% url 'admtypevehicleview' tvehiclemodel.pk %}"
+       class="btn btn-primary btn-sm ms-3 d-flex align-items-center justify-content-center"
+       title="Detail vehicle type"
+    >
+        <i class="far fa-eye"></i>
+    </a>
+
+
+    <a href="{% url 'adminmain'%}"
+       class="btn btn-primary btn-sm ms-3 d-flex align-items-center justify-content-center"
+       title="Admin dashboard"
+    >
+        <i class="fas fa-toolbox"></i>
+    </a>
+</div>

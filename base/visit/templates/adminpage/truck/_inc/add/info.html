@@ -1,0 +1,68 @@
+<form method="post" enctype="multipart/form-data" class="form-material" autocomplete="off">
+
+    {% csrf_token %}
+
+    <div class="row mb-4">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-4 h4">Truck info</h5>
+            <!-- Name input -->
+
+
+            <div class="form-outline mb-3" data-mdb-input-init>
+                {{ truck.unit }}
+                <label class="form-label" for="{{ truck.unit.id_for_label }}">
+                    {{ truck.unit.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ truck.unit.errors }}
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                {{ truck.trtype }}
+                <label class="form-label select-label labelrequired" for="{{ truck.trtype.id_for_label }}">
+                    {{ truck.trtype.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ truck.trtype.errors }}
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label" for="{{ truck.companyowned.id_for_label }}">
+                    {{ truck.companyowned.label}}</label>
+                {{ truck.companyowned }}
+                <div class="invalid-feedback d-block">
+                    {{ truck.companyowned.errors }}
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label" for="{{ truck.status.id_for_label }}">
+                    {{ truck.status.label}}</label>
+                {{ truck.status }}
+                <div class="invalid-feedback d-block">
+                    {{ truck.status.errors }}
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                {{ truck.info }}
+                <div class="invalid-feedback d-block">
+                    {{ truck.info.errors }}
+                </div>
+            </div>
+
+
+            <!-- Name input -->
+
+        </div>
+
+
+    </div>
+
+    <hr/>
+
+    <button class="btn btn-primary waves-effect waves-light fs-6" type="submit">
+        Add
+    </button>
+</form>

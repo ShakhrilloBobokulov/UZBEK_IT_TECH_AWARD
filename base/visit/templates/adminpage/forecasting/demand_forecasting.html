@@ -1,0 +1,62 @@
+{% extends 'adminpage/control/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main class="mb-5" style="margin-top: 70px;">
+    <!-- Container for demo purpose -->
+    <div class="px-4">
+        <!--        message out section-->
+        {% include '../../_inc/message.html'%}
+        <!--        message out section-->
+
+        <!--        title every page-->
+        <h1 class="h2 text-center py-1 mb-0">
+            {{title}}
+        </h1>
+        <!--        title every page-->
+        <!--        <section>-->
+        <div class="card">
+            <div class="card-body">
+
+                <div>
+                    <h4 class="title is-4">Forecasted Rates Table</h4>
+                    <div>
+                        {{ forecast_table|safe }}
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="title is-4">Forecasted Rates Chart</h4>
+                    <div>
+                        {{ plot_div|safe }}
+                    </div>
+                </div>
+                <a class="button is-link mt-3" href="{% url 'kpi_clustering_dashboard_form' %}">Back to KPI
+                    Dashboard</a>
+            </div>
+        </div>
+
+        <!--        </section>-->
+
+    </div>
+</main>
+<!-- Main layout -->
+
+<!--Footer-->
+
+<!--Main layout-->
+
+{% endblock %}
+
+

@@ -1,0 +1,126 @@
+{% load static %}
+<!-- Sidenav -->
+<nav id="main-sidenav" data-mdb-sidenav-init class="sidenav sidenav-sm shadow-1" data-mdb-hidden="false"
+     data-mdb-accordion="true">
+    <a class="ripple d-flex justify-content-center pt-4 pb-2" href="{% url 'adminmain' %}" data-mdb-ripple-init
+       data-mdb-ripple-color="primary">
+        <img
+                src="{% static 'images/logo/logometrics.png' %}"
+                height="30"
+                alt="METRICS UP LOGO"
+                loading="lazy"
+                class="mt-0"
+        />
+    </a>
+
+    <hr class="hr">
+
+    <ul class="sidenav-menu px-2 pb-5">
+
+        <!-- Overview -->
+        <li class="sidenav-item fw-bold text-black">
+            <a class="sidenav-link" href="{% url 'homepage' %}">
+                <i class="fas fa-home fa-fw me-3"></i><span>Main page</span>
+            </a>
+        </li>
+
+
+
+        <!-- User Section -->
+        <li class="sidenav-item pt-3">
+            <span class="sidenav-subheading text-muted text-uppercase fw-bold">User</span>
+        </li>
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'admuserp' %}">
+                <i class="fas fa-user fa-fw me-3"></i><span>User Profile</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'admcompdet' %}">
+                <i class="far fa-building fa-fw me-3"></i><span>Company details</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="">
+                <i class="far fa-handshake fa-fw me-3"></i><span>Partners</span>
+            </a>
+        </li>
+
+        <!-- Management Section -->
+        <li class="sidenav-item pt-3">
+            <span class="sidenav-subheading text-muted text-uppercase fw-bold">Management</span>
+        </li>
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'admtypevehicles' %}">
+                <i class="fas fa-car fa-fw me-3"></i><span>Types of vehicles</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'admrpmsetlist' %}">
+                <i class="fas fa-gear fa-fw me-3"></i><span>RPM setting</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'admdisplist' %}">
+                <i class="fas fa-users fa-fw me-3"></i><span>Dispatchers</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'admtrucklist' %}">
+                <i class="fas fa-truck fa-fw me-3"></i><span>Trucks</span>
+            </a>
+        </li>
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'admloadslist' %}">
+                <i class="fas fa-exchange-alt fa-fw me-3"></i><span>Loads management</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item pt-3">
+            <span class="sidenav-subheading text-muted text-uppercase fw-bold">OPTIMIZATION</span>
+        </li>
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'kpi_clustering_dashboard_form' %}">
+                <i class="fas fa-tasks fa-fw me-3"></i><span>KPI Optimizing</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'forecasting_demand' %}">
+                <i class="fas fa-chart-area fa-fw me-3"></i><span>Rate Forecasting</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'visualizations_dashboard' %}">
+                <i class="fas fa-sms fa-fw me-3"></i><span>Dashboard Visualization</span>
+            </a>
+        </li>
+
+        <li class="sidenav-item pt-3">
+            <span class="sidenav-subheading text-muted text-uppercase fw-bold">Anomaly Detection</span>
+        </li>
+        <li class="sidenav-item">
+            <a class="sidenav-link" href="{% url 'anomaly_detection_dashboard' %}">
+                <i class="fas fa-bell fa-fw me-3"></i><span>Anomaly</span>
+            </a>
+        </li>
+
+
+
+
+
+
+
+
+
+
+    </ul>
+</nav>
+<!-- Sidenav -->
+

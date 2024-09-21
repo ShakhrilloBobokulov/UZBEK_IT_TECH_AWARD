@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-end mb-4">
+    <div class="form-outline">
+        <input data-mdb-search data-mdb-target="#table_modal" type="text" id="search_modal"
+               class="form-control"/>
+        <label class="form-label" for="search_modal"></label>
+    </div>
+
+    {% if company.pk %}
+        <a href="{% url 'admcompupd' company.pk %}"
+           class="btn btn-primary btn-sm ms-3 d-flex align-items-center justify-content-center"
+           title="Update Company info"
+        >
+            <i class="far fa-edit"></i>
+        </a>
+
+    {% else %}
+        <a href="{% url 'admcompadd' %}"
+           class="btn btn-primary btn-sm ms-3 d-flex align-items-center justify-content-center"
+           title="Add Company info"
+        >
+            <i class="fa fa-plus"></i>
+        </a>
+
+    {% endif %}
+
+
+    <a href="{% url 'adminmain'%}"
+       class="btn btn-primary btn-sm ms-3 d-flex align-items-center justify-content-center"
+       title="Admin dashboard"
+    >
+        <i class="fas fa-toolbox"></i>
+    </a>
+</div>
+
+
+
+

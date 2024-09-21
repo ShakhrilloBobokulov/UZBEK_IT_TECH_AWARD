@@ -1,0 +1,50 @@
+<table class="table border-primary table-sm fs-6 table-striped table-hover" id="vtypesfilter"
+       style="line-height: 1.2 !important;">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Vehicle type name</th>
+        <th scope="col">Actions</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    {%for type in vehicletypelist%}
+    <tr>
+        <td scope="row" id="top-table" label="ID">{{type.pk}}</td>
+        <td id="responsive-border" label="FIO">{{type.title}}</td>
+        <td id="responsive-border" label="Action">
+            <a href="{% url 'admtypevehicleview' type.pk %}" title="View vehicle type info" class="me-2 text-dark view-button">
+                <i class="far fa-eye"></i>
+            </a>
+
+            <a href="{% url 'admtypevehicleupd' type.pk %}" title="Update vehicle type info" class="me-2 text-dark edit-button">
+                <i class="far fa-edit"></i>
+            </a>
+
+            <a href="{% url 'admtypevehicledel' type.pk %}" title="Delete vehicle type info" class="me-2 text-dark delete-button ">
+                <i class="far fa-trash-alt"></i>
+            </a>
+        </td>
+
+    </tr>
+    {% empty %}
+    <tr>
+        <td scope="row" id="top-table" label="ID"></td>
+        <td id="responsive-border" label="FIO" colspan="2">There is no vehicle type. Please add new vehicle type</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+
+        <th scope="col" style="width: 10% !important;">Actions</th>
+
+    </tr>
+    </tfoot>
+
+</table>

@@ -1,0 +1,185 @@
+<form method="post" enctype="multipart/form-data" class="form-material" autocomplete="off">
+
+    {% csrf_token %}
+
+    <div class="row mb-4">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-4 h4">Load info</h5>
+            <!-- Name input -->
+
+
+            <div class="form-outline mb-3" data-mdb-input-init>
+                {{ loads.no }}
+                <label class="form-label" for="{{ loads.no.id_for_label }}">
+                    {{ loads.no.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.no.errors }}
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                {{ loads.truck }}
+                <label class="form-label select-label labelrequired" for="{{ loads.truck.id_for_label }}">
+                    {{ loads.truck.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.truck.errors }}
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                {{ loads.trtype }}
+                <label class="form-label select-label labelrequired" for="{{ loads.trtype.id_for_label }}">
+                    {{ loads.trtype.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.trtype.errors }}
+                </div>
+            </div>
+
+
+            <div class="form-group mb-3">
+                {{ loads.dispatch }}
+                <label class="form-label select-label labelrequired" for="{{ loads.dispatch.id_for_label }}">
+                    {{ loads.dispatch.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.dispatch.errors }}
+                </div>
+            </div>
+
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                {{ loads.allmiles }}
+                <label class="form-label" for="{{ loads.telegramusername.id_for_label }}">
+                    {{ loads.allmiles.label }}</label>
+                <span class="input-group-text" id="inputGroupPrepend4">miles</span>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.allmiles.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                {{ loads.totalrate }}
+                <label class="form-label" for="{{ loads.totalrate.id_for_label }}">
+                    {{ loads.totalrate.label }}</label>
+                <span class="input-group-text" id="inputGroupPrepend2">USD</span>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.totalrate.errors }}
+                </div>
+            </div>
+
+            <div class="input-group form-outline mb-3" data-mdb-input-init>
+                {{ loads.rate }}
+                <label class="form-label" for="{{ loads.rate.id_for_label }}">
+                    {{ loads.rate.label }}</label>
+                <span class="input-group-text" id="inputGroupPrepend3">rate</span>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.rate.errors }}
+                </div>
+            </div>
+
+            <h5 class="mt-2 mb-1 h5">Note info Load</h5>
+            <!-- Name input -->
+
+            <div class="row">
+                <div class="form-group form-sm mb-2">
+
+                    {{ loads.info }}
+                    <div class="invalid-feedback d-block">
+                        {{ loads.info.errors }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Name input -->
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-4 h4">Load's date and place</h5>
+            <!-- Name input -->
+
+            <div class="form-group mb-3">
+                {{ loads.pickupstate }}
+                <label class="form-label select-label labelrequired" for="{{ loads.pickupstate.id_for_label }}">
+                    {{ loads.pickupstate.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.pickupstate.errors }}
+                </div>
+            </div>
+
+            <div class="form-outline form-sm mb-3">
+                {{ loads.pickupzip }}
+                <label class="form-label" for="{{ loads.pickupzip.id_for_label }}">
+                    {{ loads.pickupzip.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.pickupzip.errors }}
+                </div>
+            </div>
+
+            <div class="form-outline mb-3" data-mdb-datepicker-init data-mdb-input-init
+                 data-mdb-format="mm/dd/yyyy">
+                {{ loads.pickupdate }}
+                <label for="{{ loads.pickupdate.id_for_label }}" class="form-label labelrequired">
+                    {{ loads.pickupdate.label}}</label>
+                <div class="invalid-feedback d-block">
+                    {{ loads.pickupdate.errors }}
+                </div>
+            </div>
+
+            <div class="form-outline mb-3" data-mdb-input-init>
+                {{ loads.pickuptime }}
+                <label for="{{ loads.pickuptime.id_for_label }}" class="form-label labelrequired">
+                    {{ loads.pickuptime.label}}</label>
+                <div class="invalid-feedback d-block">
+                    {{ loads.pickuptime.errors }}
+                </div>
+            </div>
+
+
+            <div class="form-group mb-3">
+                {{ loads.droppstate }}
+                <label class="form-label select-label labelrequired" for="{{ loads.droppstate.id_for_label }}">
+                    {{ loads.droppstate.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.droppstate.errors }}
+                </div>
+            </div>
+
+            <div class="form-outline form-sm mb-3">
+                {{ loads.dropzip }}
+                <label class="form-label" for="{{ loads.dropzip.id_for_label }}">
+                    {{ loads.dropzip.label }}</label>
+                <div class="invalid-feedback d-block mt-1 mb-1">
+                    {{ loads.dropzip.errors }}
+                </div>
+            </div>
+
+            <div class="form-outline mb-3" data-mdb-datepicker-init data-mdb-input-init
+                 data-mdb-format="mm/dd/yyyy">
+                {{ loads.dropdate }}
+                <label for="{{ loads.dropdate.id_for_label }}" class="form-label labelrequired">
+                    {{ loads.dropdate.label}}</label>
+                <div class="invalid-feedback d-block">
+                    {{ loads.dropdate.errors }}
+                </div>
+            </div>
+            <div class="form-outline mb-3 " data-mdb-input-init>
+                {{ loads.droptime }}
+                <label for="{{ loads.droptime.id_for_label }}" class="form-label labelrequired">
+                    {{ loads.droptime.label}}</label>
+                <div class="invalid-feedback d-block">
+                    {{ loads.droptime.errors }}
+                </div>
+            </div>
+            <!-- Name input -->
+        </div>
+
+
+    </div>
+
+    <hr/>
+
+    <button class="btn btn-primary waves-effect waves-light fs-6" type="submit">
+        Add
+    </button>
+</form>

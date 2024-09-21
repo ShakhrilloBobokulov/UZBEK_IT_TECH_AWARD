@@ -1,0 +1,21 @@
+<table class="table border-primary table-sm fs-6 table-striped table-hover" style="line-height: 1.2 !important;">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th>Load</th>
+        <th>Total Rate</th>
+        <th>All miles</th>
+        <th>Is anomally?</th>
+        <th>Created at</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>{{result.pk}}</td>
+        <td>{{ result.load }}</td>
+        <td>{{ result.totalrate }}</td>
+        <td>{{ result.allmiles }}</td>
+        <td>{{ result.is_anomaly }}</td>
+        <td>{{ result.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>

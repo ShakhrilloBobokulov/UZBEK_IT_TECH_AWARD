@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>
+        {% block title %}ECO CONSTRUCT{% endblock %}
+    </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"/>
+    <!-- Font Awesome -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB ESSENTIAL -->
+    <link rel="stylesheet" href="{% static 'md5/css/mdb.min.css' %}"/>
+    <!-- MDB PLUGINS -->
+    <link rel="stylesheet" href="{% static 'md5/plugins/css/all.min.css' %}"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'adminpage/css/base.css' %}"/>
+    <!-- Custom styles -->
+    <style>
+
+    </style>
+    <script src=""></script>
+</head>
+
+<body>
+
+<header>
+    {% include './inc/base/_leftbar.html'%}
+    {% include './inc/base/_navbar.html'%}
+
+    <!-- Heading -->
+    <section class="mb-5 mb-lg-8 text-center text-md-start">
+        <!-- Background gradient -->
+        <div class="p-5"
+             style="height: 200px; background: linear-gradient(to right, hsl(209, 42.2%, 65%), hsl(209, 42.2%, 85%));">
+        </div>
+        <!-- Background gradient -->
+
+        <div class="container px-4">
+            <div class="card shadow-0" style="margin-top: -100px;">
+                <div class="card-body py-5 px-5">
+                    <div class="row gx-lg-4 align-items-center">
+                        <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+                            <h1 class="">Business Analytics Dashboard</h1>
+                            <!-- Breadcrumb -->
+                            <nav class="d-flex justify-content-center justify-content-lg-start">
+                                <h6 class="mb-0">
+                                    <a href="" class="text-muted">Home</a>
+                                    <span>/</span>
+                                    <a href="" class="text-muted">Analytics</a>
+                                    <span>/</span>
+                                    <a href="" class="text-muted"><u>Dashboard</u></a>
+                                </h6>
+                            </nav>
+                            <!-- Breadcrumb -->
+                        </div>
+
+                        <div class="col-lg-6 text-center text-lg-end">
+                            <button type="button" class="btn btn-link me-1 mb-4 px-2 px-md-3" data-mdb-ripple-init
+                                    data-ripple-color="primary">
+                                Customize<i class="fas fa-cogs ms-2"></i>
+                            </button>
+                            <button type="button" class="btn btn-link mb-4 px-2 px-md-3" data-mdb-ripple-init
+                                    data-ripple-color="primary">
+                                Export<i class="fas fa-download ms-2"></i>
+                            </button>
+
+                            <div class="row justify-content-center justify-content-lg-end">
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <select class="form-select">
+                                        <option value="all" selected>All Categories</option>
+                                        <option value="revenue">Revenue</option>
+                                        <option value="expenses">Expenses</option>
+                                        <option value="forecast">Forecast</option>
+                                    </select>
+                                    <label class="form-label select-label">Category</label>
+                                </div>
+
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <select class="form-select">
+                                        <option value="today">Today</option>
+                                        <option value="yesterday">Yesterday</option>
+                                        <option value="last7days" selected>Last 7 days</option>
+                                        <option value="last28days">Last 28 days</option>
+                                        <option value="last90days">Last 90 days</option>
+                                    </select>
+                                    <label class="form-label select-label">Date Range</label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-outline" data-mdb-input-init data-mdb-datepicker-inline="true">
+                                        <input type="text" class="form-control" id="customDatepicker"
+                                               value="Custom date"/>
+                                        <label for="customDatepicker" class="form-label">Custom Date</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Heading -->
+
+
+</header>
+
+{% if messages %}
+{% for message in messages %}
+{% if message.tags == 'error' %}
+<div class="alert alert-danger" role="alert">
+    {{ message }}
+</div>
+{% else %}
+<div class="alert alert-{{ message.tags }}">
+    {{ message }}
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% block content %}
+
+{% endblock %}
+
+
+</body>
+<!-- MDB ESSENTIAL -->
+<script type="text/javascript" src="{% static 'md5/js/mdb.umd.min.js' %}"></script>
+<!-- MDB PLUGINS -->
+<script type="text/javascript" src="{% static 'md5/plugins/js/all.min.js' %}"></script>
+<!-- Custom scripts -->
+<script type="text/javascript"></script>
+<script src="{% static 'adminpage/js/script.js' %}"></script>
+</html>

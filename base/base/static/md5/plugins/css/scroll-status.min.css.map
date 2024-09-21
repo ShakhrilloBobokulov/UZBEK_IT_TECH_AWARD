@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../../src/plugins/scroll-status/scss/_scroll-status.scss"],"names":[],"mappings":"AAAA,eACE,gBACA,aACA,WACA,gBAGF,wBACE","file":"scroll-status.min.css","sourcesContent":[".scroll-status {\n  position: sticky;\n  z-index: 1020;\n  width: 100%;\n  background: #ccc;\n}\n\n.scroll-status-progress {\n  width: 0;\n}\n"]}

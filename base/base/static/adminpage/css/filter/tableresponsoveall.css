@@ -1,0 +1,100 @@
+/*responsive mode 1199px*/
+/*RESPONSIVE TABLE*/
+th input {
+    width: 100% !important;
+}
+
+th, td { white-space: nowrap;  }
+div.dataTables_wrapper, thead, tfoot, tbody {
+    width: 100% important;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+@media(min-width: 1099px){
+    #trucksfilter{
+        min-width: 1200px !important;
+    }
+    #driversfilter{
+        min-width: 1200px !important;
+    }
+}
+
+@media(max-width: 767px){
+    #trucksfilter_info{
+        margin-bottom: 30px;
+    }
+    #driversfilter_info{
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 1099px){
+tfoot{
+    display: none;
+}
+
+.table{
+text-align: right;
+}
+.table thead{
+    display: none
+}
+
+.table, .table tbody, .table tr, .table td{
+    display: block;
+}
+
+.table tr{
+    margin-bottom: 15px;
+    border: 1px solid #111;
+    border-radius: 3px;
+}
+
+.table td{
+    margin-bottom: right;
+    padding-left: 35%;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.table td::before{
+    content: attr(label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.table > thead > tr:first-child{
+    display: none;
+    margin-top: 5px;
+}
+
+/*responsive border*/
+#responsive-border{
+    border: 1px solid #a9a9a9;
+}
+
+/*1st cell - changing the color*/
+#top-table{
+    background-color: rgba(var(--mdb-primary-rgb),var(--mdb-bg-opacity)) !important;
+    color: #fff;
+}
+#top-table a{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+}
+
+#id{
+    display: none;
+}
+
+}

@@ -1,0 +1,175 @@
+{% extends 'visit/basefaq.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<main class="mt-3">
+    <br>
+
+
+    <div class="container my-5">
+        <!--Section: FAQ-->
+
+        <section class="text-center">
+            <h4 class="mb-5"><strong>Latest Blog Posts</strong></h4>
+
+            <div class="row">
+                <!-- Blog Post 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="{% static 'images/logo/blog.jpg' %}" class="img-fluid"
+                                 alt="Blog Image 1"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Exploring the Future of Logistics in Uzbekistan</h5>
+                            <p class="card-text">
+                                Dive into how the logistics landscape in Uzbekistan is evolving and the potential for
+                                outsourcing companies.
+                            </p>
+                            <a href="#!" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="{% static 'images/logo/blog.jpg' %}" class="img-fluid"
+                                 alt="Blog Image 2"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Tips for Streamlining Your Supply Chain</h5>
+                            <p class="card-text">
+                                Learn how to optimize your supply chain and reduce costs with these actionable tips.
+                            </p>
+                            <a href="#!" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="{% static 'images/logo/blog.jpg' %}" class="img-fluid"
+                                 alt="Blog Image 3"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Understanding Customs Regulations for US-Uzbekistan Trade</h5>
+                            <p class="card-text">
+                                A comprehensive guide to navigating the complexities of customs regulations between the
+                                USA and Uzbekistan.
+                            </p>
+                            <a href="#!" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Blog Post 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="{% static 'images/logo/blog2.jpg' %}" class="img-fluid"
+                                 alt="Blog Image 4"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Innovative Technologies Transforming the Logistics Industry</h5>
+                            <p class="card-text">
+                                Explore the latest technologies driving efficiency and innovation in logistics.
+                            </p>
+                            <a href="#!" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="{% static 'images/logo/blog2.jpg' %}" class="img-fluid"
+                                 alt="Blog Image 5"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">The Role of AI in Modern Supply Chains</h5>
+                            <p class="card-text">
+                                How AI is reshaping supply chain management and the benefits it brings to businesses.
+                            </p>
+                            <a href="#!" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="{% static 'images/logo/blog2.jpg' %}" class="img-fluid"
+                                 alt="Blog Image 6"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Logistics Outsourcing: Key Considerations for SMEs</h5>
+                            <p class="card-text">
+                                Discover what small and medium-sized enterprises need to consider when outsourcing
+                                logistics.
+                            </p>
+                            <a href="#!" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Pagination -->
+        <nav class="my-4" aria-label="...">
+            <ul class="pagination pagination-circle justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+</main>
+
+<!--Main layout-->
+
+{% endblock %}

@@ -1,0 +1,66 @@
+<div class="form-material">
+
+    <div class="row mb-4 stripsection">
+        <!--                    personal info-->
+        <div class="col-lg-4 col-md-6 border-end border-primary">
+            <h5 class="mb-1 h4" style="color: #35558a;">Truck info</h5>
+
+            <!-- Name input -->
+            <!--                            <p class="mb-0" style="color: #35558a;">Payment summary</p>-->
+            <hr class="mt-2 mb-4"
+                style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Unit</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{truckinfo.unit}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Type of vehicle</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {{truckinfo.trtype}}
+                </p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Company owned</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {% if truckinfo.companyowned %}
+                    Yes
+                    {% else %}
+                    Leased
+                    {% endif %}
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold mb-0">Status</p>
+                <p class="fw-bold mb-0" style="color: #35558a;">
+                    {% if truckinfo.status %}
+                    Active
+                    {% else %}
+                    Passive
+                    {% endif %}
+                </p>
+            </div>
+
+            <h5 class="mb-1 mt-3 h5" style="color: #35558a;">Additional note of truck</h5>
+            <hr class="mt-2 mb-1"
+                style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
+
+            <div class="d-flex justify-content-between">
+                {% if truckinfo.info %}
+                <p class="mb-0" style="color: #35558a;">
+                    {{truckinfo.info}}
+                </p>
+                {% else %}
+                <p class="mb-0">
+                    not entered
+                </p>
+                {% endif %}
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,229 @@
+{% extends 'visit/basefaq.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- Start your project here-->
+
+<main class="mt-3">
+    <br>
+
+
+    <div class="container my-5">
+        <!--Section: FAQ-->
+        <section>
+            <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Frequently Asked Questions</h3>
+            <p class="text-center mb-5">
+                Find the answers to the most common questions regarding our outsourcing logistics services.
+            </p>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i> How can I start
+                        using your service?</h6>
+                    <p>
+                        <strong><u>Getting started is easy!</u></strong> Simply sign up on our platform, and you'll gain
+                        access to a dashboard where you can manage your logistics requirements.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i> What documents do I
+                        need to provide for shipping?</h6>
+                    <p>
+                        <strong><u>Essential documentation:</u></strong> You'll need to provide a commercial invoice,
+                        packing list, and any specific documents required by the destination country.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i> Can I track my
+                        shipments?</h6>
+                    <p>
+                        Yes, our platform offers real-time tracking so you can monitor your shipments from departure to
+                        arrival.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-rocket text-primary pe-2"></i> What are your rates
+                        for international shipping?</h6>
+                    <p>
+                        Rates vary based on the destination, weight, and type of goods. You can get a detailed quote by
+                        entering your shipment details on our platform.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-home text-primary pe-2"></i> Do you offer insurance
+                        for shipments?</h6>
+                    <p><strong><u>Yes, we do!</u></strong> We offer comprehensive insurance options to protect your
+                        shipments from any unforeseen events.</p>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i> How do I contact
+                        customer support?</h6>
+                    <p>
+                        You can reach our customer support team through the contact form on our website, or via phone
+                        and email. We’re here to assist you 24/7.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!--Section: FAQ-->
+        <div class="w-100">
+
+            <!--Disabled-->
+            <p class="mb-1">Additional Information</p>
+            <div class="list-group">
+                <a href="#disabledAnswer1collapse" data-mdb-collapse-init aria-expanded="false"
+                   aria-controls="disabledAnswer1collapse" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">What if my shipment is delayed?</h5>
+                    </div>
+                    <p class="mb-1">
+                        Delays can happen due to various reasons. Our team will keep you informed and work to resolve
+                        any issues as quickly as possible.
+                    </p>
+                    <small><u>Learn more</u></small>
+                    <!-- Collapsed content -->
+                    <div class="collapse mt-3" id="disabledAnswer1collapse">
+                        If your shipment is delayed, we'll notify you immediately and provide updated delivery
+                        estimates. Our team is committed to ensuring your goods arrive as soon as possible.
+                    </div>
+                </a>
+                <a href="#disabledAnswer2collapse" data-mdb-collapse-init aria-expanded="false"
+                   aria-controls="disabledAnswer1collapse" class="list-group-item list-group-item-action disabled">
+                    <div class="d-flex w-100 justify-content-between my-2">
+                        <h5 class="mb-1">What payment methods do you accept?</h5>
+                    </div>
+                    <p class="mb-1">
+                        We accept various payment methods including credit cards, bank transfers, and PayPal.
+                    </p>
+                    <!-- Collapsed content -->
+                    <div class="collapse mt-3" id="disabledAnswer2collapse">
+                        Payment details and instructions are provided at the checkout stage. Ensure that your payment is
+                        completed to avoid any delays in processing your shipments.
+                    </div>
+                </a>
+                <a href="#disabledAnswer3collapse" data-mdb-collapse-init aria-expanded="false"
+                   aria-controls="disabledAnswer1collapse" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Do you handle customs clearance?</h5>
+                    </div>
+                    <p class="mb-1">
+                        Yes, we assist with customs clearance for your shipments.
+                    </p>
+                    <small class="text-muted"><u>Learn more</u></small>
+                    <!-- Collapsed content -->
+                    <div class="collapse mt-3" id="disabledAnswer3collapse">
+                        Our team works closely with customs to ensure your goods clear through without issues. We handle
+                        all necessary paperwork and communications on your behalf.
+                    </div>
+                </a>
+            </div>
+
+            <!--Highlighted-->
+            <p class="mb-1 mt-4">Popular Topics</p>
+            <div class="list-group">
+                <a href="#highlightedAnswer1collapse" data-mdb-collapse-init aria-expanded="false"
+                   aria-controls="highlightedAnswer1collapse" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">How do I schedule a pickup?</h5>
+                    </div>
+                    <p class="mb-1">
+                        Scheduling a pickup is easy through our online platform.
+                    </p>
+                    <small><u>Learn more</u></small>
+                    <!-- Collapsed content -->
+                    <div class="collapse mt-3" id="highlightedAnswer1collapse">
+                        Simply log into your account, select your shipment details, and choose a pickup time that suits
+                        you. Our team will confirm and arrange the rest.
+                    </div>
+                </a>
+                <a href="#highlightedAnswer2collapse" data-mdb-collapse-init aria-expanded="false"
+                   aria-controls="highlightedAnswer1collapse"
+                   class="list-group-item list-group-item-action bg-info text-white border-0">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">What is your return policy?</h5>
+                    </div>
+                    <p class="mb-1">
+                        Our return policy is outlined on our website. Please refer to it for more details.
+                    </p>
+                    <small class=" text-white"><u>Learn more</u></small>
+                    <!-- Collapsed content -->
+                    <div class="collapse mt-3" id="highlightedAnswer2collapse">
+                        Our return policy covers various scenarios. Contact our support team for personalized
+                        assistance.
+                    </div>
+                </a>
+                <a href="#highlightedAnswer3collapse" data-mdb-collapse-init aria-expanded="false"
+                   aria-controls="highlightedAnswer1collapse" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">What areas do you service?</h5>
+                    </div>
+                    <p class="mb-1">
+                        We provide logistics services across Uzbekistan and the USA.
+                    </p>
+                    <small class="text-muted"><u>Learn more</u></small>
+                    <!-- Collapsed content -->
+                    <div class="collapse mt-3" id="highlightedAnswer3collapse">
+                        Our extensive network covers major cities and regions in both countries. Contact us for specific
+                        service availability in your area.
+                    </div>
+                </a>
+            </div>
+
+            <!--With small icons-->
+            <p class="mb-1 mt-4">Other Questions</p>
+            <div class="accordion">
+                <a href="#smallAnswer1collapse" data-mdb-collapse-init aria-expanded="false"
+                   aria-controls="smallAnswer1collapse" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="my-2 w-100"><i class="fas fa-question me-2"></i>How do I update my account
+                            information?</h5>
+                    </div>
+                    <p class="mb-1">
+                        You can update your account details anytime from your profile settings.
+                    </p>
+                    <small><u>Learn more</u></small>
+                    <!-- Collapsed content -->
+                    <div class="collapse mt-3" id="smallAnswer1collapse">
+                        Log in to your account, go to profile settings, and make the necessary changes. If you need
+                        assistance, our support team is here to help.
+                    </div>
+                </a>
+                <a href="#smallAnswer2collapse" data-mdb-collapse-init aria-expanded="false"
+                   aria-controls="smallAnswer1collapse" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="my-2 w-100"><i class="fas fa-question me-2"></i>What happens if my goods are damaged
+                            during transit?</h5>
+                    </div>
+                    <p class="mb-1">
+                        In the rare event of damage, our insurance will cover the losses.
+                    </p>
+                    <small><u>Learn more</u></small>
+                    <!-- Collapsed content -->
+                    <div class="collapse mt-3" id="smallAnswer2collapse">
+                        If your goods are damaged during transit, we'll initiate a claims process on your behalf. Our
+                        insurance options ensure you're compensated accordingly.
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+</main>
+
+<!--Main layout-->
+
+{% endblock %}

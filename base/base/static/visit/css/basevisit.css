@@ -1,0 +1,23 @@
+@media (max-width: 991px) {
+  .navbar-scroll {
+    background-color: #fff;
+  }
+}
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars,
+.navbar-scroll .navbar-brand {
+  color: #4f4f4f;
+}
+.navbar-scrolled .navbar-brand {
+  color: #4f4f4f;
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  #intro {
+    height: 100vh;
+  }
+}
+@media (min-width: 850px) {
+  #intro {
+    height: 100vh;
+  }
+}
